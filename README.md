@@ -6,12 +6,9 @@ This project analyzes how crypto traders behave under different market sentiment
 
 ## Folder Structure
 
-├── csv_files/
-│ └── cleaned_trader_sentiment_data.csv
 ├── outputs/
 │ └── *.png visualizations (charts and plots)
 ├── ds_report.pdf 
-├── notebook_1.ipynb # Google Colab notebook with full analysis
 └── README.md 
 
 
