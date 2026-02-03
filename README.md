@@ -1,69 +1,71 @@
 # Trade_Sentiment_Analysis_Python
 
-*Data Overview*
---------------
-This project analyzes the relationship between trader performance and Bitcoin market sentiment (Fear/Greed). It aims to uncover patterns that can guide trading strategies in Web3 markets.
-I analyze trade sentiments using two data sources, both available at the following link: https://docs.google.com/document/d/1ZyM5IBD459ulv1pMM1GYQ3SmMYezrVlygRmp3RRHLCI/edit?tab=t.0
+Trader Behavior Insights Based on Market Sentiment
 
-Total Trades Analyzed: 184,263 trades <br>
-Sentiment Categories: Extreme Greed, Greed, Neutral, Fear <br>
-Data Sources: Historical trader data + Fear & Greed Index <br>
+This project analyzes how crypto traders behave under different market sentiments such as Fear, Greed, Extreme Greed, and Extreme Fear. It combines historical trading data from Hyperliquid with the Bitcoin Fear & Greed Index to uncover patterns that can help design smarter trading strategies.
 
-**Tools & Libraries**
-------
-Python, Pandas, Matplotlib, Seaborn, Jupyter Notebook
+## Folder Structure
 
-**Key Steps**
------------
-Data Cleaning:
-- Parsed timestamps
-- Filtered out erroneous/unusable rows
-- Removed trades outside sentiment data range
-  
-Data Merging:
-- Joined trader data with sentiment classification on the date field
+├── csv_files/
+│ └── cleaned_trader_sentiment_data.csv
+├── outputs/
+│ └── *.png visualizations (charts and plots)
+├── ds_report.pdf 
+├── notebook_1.ipynb # Google Colab notebook with full analysis
+└── README.md 
 
-Exploratory Data Analysis (EDA):
-- Trade volume by sentiment classification
-- Average profit/loss under Fear vs Greed conditions
 
-*Key Insights*
---------------    
-**Performance by Sentiment:**
+## Project Objective
 
-Greed > Fear > Extreme Greed > Neutral
+To explore how trader behavior (profitability, volume, trade direction, risk) aligns with overall crypto market sentiment. Key questions include:
 
-- Greed periods show the highest average PnL ($87.89) 
+- Do traders earn more in Greed than Fear?
+- Is there more risk-taking in certain sentiments?
+- Are there predictable behavior patterns?
 
-- Fear periods show moderate performance ($50.05) 
 
-- Extreme Greed and Neutral show lower returns
+## Datasets Used
 
-**Win Rate Analysis:**
-- No sentiment category exceeds 50% win rate
+1. **Hyperliquid Trader Data**
+   - Fields: `Account`, `Coin`, `Execution Price`, `Size USD`, `Side`, `Closed PnL`, `Timestamp`, etc.
 
-- Extreme Greed has the highest win rate (49%)
+2. **Bitcoin Fear & Greed Index**
+   - Fields: `Date`, `Classification` (Fear, Greed, Extreme Greed, etc.)
 
-- Neutral periods have the lowest win rate (31.7%)
 
-**Trade Behavior:**
-- Traders use larger positions during Extreme Greed ($5,660 avg) 
+## Key Steps
 
-- Smaller positions during Neutral sentiment ($3,059 avg)
+- Cleaned and formatted timestamp columns
+- Merged both datasets by date
+- Performed exploratory data analysis (EDA)
+- Created visualizations to compare behavior across sentiments
 
-- Trade size correlates with sentiment intensity
 
-**Trading Strategy Implications**
-- Optimal Conditions: Greed periods offer best profit potential
-- Risk Management: Extreme sentiment may indicate market tops/bottoms
-- Position Sizing: Consider adjusting trade size based on sentiment
-- Timing: Greed phases might be good for taking profits
+## Visuals & Insights
 
-**Limitations**
-- Data covers limited time period
-- Sentiment data might have reporting delays
-- Individual trader strategies vary significantly
+- Boxplot of Closed PnL across sentiments
+- Buy vs Sell trade volume
+- % of High-Risk Trades in each sentiments
+- Top Performing Traders chart
+- Weekly trend of average PnL
 
-**Result**
----------
-This analysis suggests that market sentiment can be a valuable indicator for timing trades and managing position sizes, though it should be used in conjunction with other technical and fundamental analysis tools.
+All visuals are saved in the `outputs/` folder.
+
+
+## Final Report
+
+See `ds_report.pdf` for a detailed summary of:
+- Cleaning steps
+- Charts
+- Insights
+- Final conclusions
+
+
+## Tools Used
+
+- Python (Pandas, Matplotlib, Seaborn)
+- Google Colab
+- GitHub
+- Google Docs (for PDF report)
+
+
