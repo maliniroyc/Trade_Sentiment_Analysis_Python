@@ -61,7 +61,7 @@ See `ds_report.pdf` for a detailed summary of:
 ## Tools Used
 
 - Python (Pandas, Matplotlib, Seaborn)
-- Google Colab
+- Jupyter Notebook
 - GitHub
 - Google Docs (for PDF report)
 
