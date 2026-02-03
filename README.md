@@ -41,10 +41,20 @@ To explore how trader behavior (profitability, volume, trade direction, risk) al
 ## Visuals & Insights
 
 - Boxplot of Closed PnL across sentiments
+<img width="1000" height="600" alt="closed_pnl_by_sentiment" src="https://github.com/user-attachments/assets/e1fe7193-af72-4355-904b-859d3111b483" />
+
 - Buy vs Sell trade volume
+  <img width="1000" height="600" alt="buy_sell_by_sentiment" src="https://github.com/user-attachments/assets/708777d9-cdbe-4e86-a2bd-dd0d0d992292" />
+
 - % of High-Risk Trades in each sentiments
+  <img width="800" height="500" alt="high_risk_trades" src="https://github.com/user-attachments/assets/2810b142-7bf6-4f93-8b31-446b7fed7673" />
+
 - Top Performing Traders chart
+  <img width="1000" height="500" alt="top_10_traders" src="https://github.com/user-attachments/assets/81d19922-febc-41f6-9b28-11ff4c03924e" />
+
 - Weekly trend of average PnL
+  <img width="1000" height="500" alt="pnl_weekly_trend" src="https://github.com/user-attachments/assets/4b151829-7717-4849-aafe-593c7452b266" />
+
 
 All visuals are saved in the `outputs/` folder.
 
