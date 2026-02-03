@@ -24,6 +24,18 @@ The goal is to uncover behavioral patterns and translate them into actionable tr
 ├── README.md
 
 
+## How to Run
+
+Place datasets in the data/ folder
+
+Open the notebook:
+
+jupyter notebook "Market Sentiment Analysis.ipynb"
+
+Run all cells from top to bottom
+
+Generated charts will be saved in the outputs/ directory
+
 ## Project Objective
 
 To explore how trader behavior (profitability, volume, trade direction, risk) aligns with overall crypto market sentiment. Key questions include:
@@ -40,7 +52,13 @@ To explore how trader behavior (profitability, volume, trade direction, risk) al
 
 2. **Bitcoin Fear & Greed Index**
    - Fields: `Date`, `Classification` (Fear, Greed, Extreme Greed, etc.)
+     
+## Methodology
 
+1. We analyzed the relationship between market sentiment (Fear vs Greed) and trader behavior using Hyperliquid historical trade data combined with a Bitcoin Fear & Greed Index.
+2. Trade-level data was cleaned, timestamps were normalized, and metrics were aggregated to a daily trader level.
+3. Key performance and behavioral metrics were computed and aligned with daily sentiment labels.
+4. We then compared performance across sentiment regimes and segmented traders by leverage, frequency, and consistency.
 
 ## Key Steps
 
@@ -48,18 +66,6 @@ To explore how trader behavior (profitability, volume, trade direction, risk) al
 - Merged both datasets by date
 - Performed exploratory data analysis (EDA)
 - Created visualizations to compare behavior across sentiments
-
-How to Run
-
-Place datasets in the data/ folder
-
-Open the notebook:
-
-jupyter notebook "Market Sentiment Analysis.ipynb"
-
-Run all cells from top to bottom
-
-Generated charts will be saved in the outputs/ directory
 
 ## Visuals & Insights
 
@@ -80,30 +86,6 @@ Generated charts will be saved in the outputs/ directory
   The weekly average PnL chart shows sharp drawdowns during Fear regimes, highlighting elevated downside risk compared to Greed periods.
 
 All visuals are saved in the `outputs/` folder.
-
-
-## Final Report
-
-See `ds_report.pdf` for a detailed summary of:
-- Cleaning steps
-- Charts
-- Insights
-- Final conclusions
-
-
-## Tools Used
-
-- Python (Pandas, Matplotlib, Seaborn)
-- Jupyter Notebook
-- GitHub
-- Google Docs (for PDF report)
-
-## Methodology
-
-1. We analyzed the relationship between market sentiment (Fear vs Greed) and trader behavior using Hyperliquid historical trade data combined with a Bitcoin Fear & Greed Index.
-2. Trade-level data was cleaned, timestamps were normalized, and metrics were aggregated to a daily trader level.
-3. Key performance and behavioral metrics were computed and aligned with daily sentiment labels.
-4. We then compared performance across sentiment regimes and segmented traders by leverage, frequency, and consistency.
 
 ## Key Insights (Backed by Charts & Tables)
 
@@ -137,5 +119,21 @@ During Greed days, allow higher leverage and increased trade frequency only for 
 
 ## Conclusion
 
-Market sentiment plays a critical role in shaping trader behavior and profitability.
-Incorporating sentiment awareness into risk management and strategy design can meaningfully improve trading outcomes, particularly during volatile market regimes.
+- Market sentiment plays a critical role in shaping trader behavior and profitability.
+- Incorporating sentiment awareness into risk management and strategy design can meaningfully improve trading outcomes, particularly during volatile market regimes.
+
+## Final Report
+
+See `ds_report.pdf` for a detailed summary of:
+- Cleaning steps
+- Charts
+- Insights
+- Final conclusions
+
+
+## Tools Used
+
+- Python (Pandas, Matplotlib, Seaborn)
+- Jupyter Notebook
+- GitHub
+- Google Docs (for PDF report)
